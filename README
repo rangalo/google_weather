@@ -1,0 +1,24 @@
+The google_weather script is licensed under GPL v3.
+The information about GPL is available in gpl.txt file
+Information about copying the script is in COPYING file.
+
+Dependency: xsltproc, conky
+
+This is a simple bash script which is supposed to be called from conky.
+
+The script downloads weather information from www.google.com  in xml format.
+
+The xml file is processed by different stylesheets.
+
+Fist install the weather.ttf fonts.
+
+
+
+ Usage in conkyrc:
+ ${execi 1800 /path/to/weather/weather.sh location option }
+ Usage Example:
+ ${execi 1800 /path/to/weather/weather.sh "Munich,Germany" } - prints current conditions
+ ${font weather:size=45}${execi 1800 /path/to/weather/weather.sh "Munich,Germany" cp } ${font}- prints symbol for current condition; this is printed in weather fonts
+ ${execi 1800 /path/to/weather/weather.sh "Munich,Germany" dl } - prints list of days
+ ${font weather:size=45}${execi 1800 /path/to/weather/weather.sh "Munich,Germany" fcp } ${font} - prints symbols for forecast condition; this is printed in weather fonts
+ ${execi 1800 /path/to/weather/weather.sh "Munich,Germany" fct} - list of high/low temperatures
