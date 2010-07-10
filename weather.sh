@@ -107,6 +107,9 @@ then
 elif [ "$CONDITIONS" = "ct" ];
 then
     XSLT=$RUNDIR/currentTemp.xslt
+elif [ "$CONDITIONS" = "cc" ];
+then
+    XSLT=$RUNDIR/currentCondition.xslt
 elif [ "$CONDITIONS" = "fct" ];
 then
     XSLT=$RUNDIR/fcTemp.xslt
