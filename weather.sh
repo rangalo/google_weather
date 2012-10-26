@@ -47,7 +47,11 @@ XSLTCMD=/usr/bin/xsltproc
 
 # CURL url. Use cc=* for current forecast or dayf=10 to get a multi-day forecast
 #CURLURL="http://xoap.weather.com/weather/local/$LOCID?cc=*&unit=$UNITS&dayf=4"
-CURLURL="http://www.google.com/ig/api?weather=${LOCID}"
+GOOGLEURL="http://www.google.com/ig/api?weather=${LOCID}"
+WWURL="http://free.worldweatheronline.com/feed/weather.ashx?q=${LOCID}&format=xml&num_of_days=3&key=e4c48cfba5115031121310"
+CURLURL=$WWURL
+# XSLTDIR=google
+XSLTDIR=worldweather
 
 weather_xml="${RUNDIR}/weatherInfo.xml"
 # don't get the file  if created within an hour
@@ -97,24 +101,24 @@ function get_file ()
 # You can modify this xslt to your liking 
 if [ "$CONDITIONS" = "cp" ];
 then
-    XSLT=$RUNDIR/conditions.xslt
+    XSLT=$RUNDIR/${XSLTDIR}/conditions.xslt
 elif [ "$CONDITIONS" = "dl" ];
 then
-    XSLT=$RUNDIR/fcDayList.xslt
+    XSLT=$RUNDIR/${XSLTDIR}/fcDayList.xslt
 elif [ "$CONDITIONS" = "fcp" ];
 then
-    XSLT=$RUNDIR/fcConditions.xslt
+    XSLT=$RUNDIR/${XSLTDIR}/fcConditions.xslt
 elif [ "$CONDITIONS" = "ct" ];
 then
-    XSLT=$RUNDIR/currentTemp.xslt
+    XSLT=$RUNDIR/${XSLTDIR}/currentTemp.xslt
 elif [ "$CONDITIONS" = "cc" ];
 then
-    XSLT=$RUNDIR/currentCondition.xslt
+    XSLT=$RUNDIR/${XSLTDIR}/currentCondition.xslt
 elif [ "$CONDITIONS" = "fct" ];
 then
-    XSLT=$RUNDIR/fcTemp.xslt
+    XSLT=$RUNDIR/${XSLTDIR}/fcTemp.xslt
 else
-    XSLT=$RUNDIR/weather.xslt 
+    XSLT=$RUNDIR/${XSLTDIR}/weather.xslt 
 fi
 
 # echo $XSLT

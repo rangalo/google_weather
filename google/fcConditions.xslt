@@ -5,11 +5,11 @@
         <xsl:apply-templates select="weather"/>
     </xsl:template>
 
-    <xsl:template match="weather">
-        <xsl:for-each select="forecast_conditions[position() >= 2]">
+    <xsl:template match="data">
+        <xsl:for-each select="weather[position() >= 2]">
            <xsl:call-template name="get-condition-symbol">
                 <xsl:with-param name="condition">
-                    <xsl:value-of select="condition/@data"/>
+                    <xsl:value-of select="weatherDesc"/>
                 </xsl:with-param>
             </xsl:call-template>
             <xsl:if test="position() != 3">
