@@ -16,7 +16,7 @@
                     <xsl:text>Tomorrow</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:text>          </xsl:text>
+                    <xsl:text>        </xsl:text>
                     <xsl:value-of select="date"/>
                 </xsl:otherwise>
             </xsl:choose>

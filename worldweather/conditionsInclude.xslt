@@ -15,7 +15,13 @@
             <xsl:when test="contains($condition,'Cloud')">
                <xsl:text>e</xsl:text> 
             </xsl:when>
+            <xsl:when test="contains($condition,'cloud')">
+               <xsl:text>e</xsl:text> 
+            </xsl:when>
             <xsl:when test="contains($condition,'Fog')">
+               <xsl:text>e</xsl:text> 
+            </xsl:when>
+            <xsl:when test="contains($condition,'fog')">
                <xsl:text>e</xsl:text> 
             </xsl:when>
             <xsl:when test="contains($condition,'Overcast')">
@@ -55,6 +61,9 @@
                <xsl:text>h</xsl:text> 
             </xsl:when>
             <xsl:when test="contains($condition,'Drizzle')">
+               <xsl:text>h</xsl:text> 
+            </xsl:when>
+            <xsl:when test="contains($condition,'drizzle')">
                <xsl:text>h</xsl:text> 
             </xsl:when>
             <xsl:when test="contains($condition,'Shower')">
