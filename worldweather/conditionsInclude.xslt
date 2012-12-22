@@ -57,7 +57,7 @@
             <xsl:when test="contains($condition,'Rain')">
                <xsl:text>h</xsl:text> 
             </xsl:when>
-            <xsl:when test="contains($condition,'Light rain')">
+            <xsl:when test="contains($condition,'rain')">
                <xsl:text>h</xsl:text> 
             </xsl:when>
             <xsl:when test="contains($condition,'Drizzle')">
