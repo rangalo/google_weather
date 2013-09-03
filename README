@@ -1,4 +1,4 @@
-The _weather script is licensed under GPL v3.
+The weather script is licensed under GPL v3.
 The information about GPL is available in gpl.txt file
 Information about copying the script is in COPYING file.
 
@@ -6,7 +6,7 @@ Dependency: xsltproc, conky
 
 This is a simple bash script which is supposed to be called from conky.
 
-The script downloads weather information from www.google.com  in xml format.
+The script downloads weather information from worldweatheronline.com in xml format.
 
 The xml file is processed by different stylesheets.
 
