@@ -30,6 +30,9 @@
             <xsl:when test="contains($condition,'Mist')">
                <xsl:text>e</xsl:text> 
             </xsl:when>
+            <xsl:when test="contains($condition,'mist')">
+               <xsl:text>e</xsl:text> 
+            </xsl:when>
             <xsl:when test="contains($condition,'Thunder')">
                <xsl:text>i</xsl:text> 
             </xsl:when>
@@ -43,6 +46,12 @@
                <xsl:text>k</xsl:text> 
             </xsl:when>
             <xsl:when test="contains($condition,'snow')">
+               <xsl:text>k</xsl:text> 
+            </xsl:when>
+            <xsl:when test="contains($condition,'sleet')">
+               <xsl:text>k</xsl:text> 
+            </xsl:when>
+            <xsl:when test="contains($condition,'Sleet')">
                <xsl:text>k</xsl:text> 
             </xsl:when>
             <xsl:when test="contains($condition,'Light snow')">

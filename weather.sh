@@ -48,7 +48,9 @@ XSLTCMD=/usr/bin/xsltproc
 # CURL url. Use cc=* for current forecast or dayf=10 to get a multi-day forecast
 #CURLURL="http://xoap.weather.com/weather/local/$LOCID?cc=*&unit=$UNITS&dayf=4"
 GOOGLEURL="http://www.google.com/ig/api?weather=${LOCID}"
-WWURL="http://free.worldweatheronline.com/feed/weather.ashx?q=${LOCID}&format=xml&num_of_days=4&key=e4c48cfba5115031121310"
+#WWURL="http://free.worldweatheronline.com/feed/weather.ashx?q=${LOCID}&format=xml&num_of_days=4&key=e4c48cfba5115031121310"
+#WWURL="http://free.worldweatheronline.com/feed/weather.ashx?q=${LOCID}&format=xml&num_of_days=4&key=hhzbatnsph53bm79naj5s988"
+WWURL="http://api.worldweatheronline.com/free/v1/weather.ashx?q=${LOCID}&format=xml&num_of_days=4&key=hhzbatnsph53bm79naj5s988"
 CURLURL=$WWURL
 # XSLTDIR=google
 XSLTDIR=worldweather
